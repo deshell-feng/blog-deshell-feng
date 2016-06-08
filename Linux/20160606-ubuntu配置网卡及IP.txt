@@ -40,6 +40,9 @@
 
 　　nameserver 211.92.8.161
 
+    ——对于Ubuntu系统，修改resolv.conf文件每次重启文件会被重置，解决方法：编辑/etc/resolvconf/resolv.conf.d/tail（如果没有该文件，则建立一个文件名为tail的文本文件即可），里面添加几个nameserver xxx.xxx.xxx.xxx，xxx替换为你要的实际dns地址，这样每次重启后，它会将你所编辑添加的dns服务器写入/etc/resolv.conf中
+
+
 　　3.增加默认网关
 
 　　route add default gw 172.16.15.253
