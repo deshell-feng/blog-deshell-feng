@@ -2,11 +2,11 @@
 
 出处http://blog.csdn.net/u010796790
 
-1、spring 框架解决字符串编码问题：过滤器 CharacterEncodingFilter（filter-name） 
-2、在web.xml配置监听器ContextLoaderListener（listener-class） 
+1. spring 框架解决字符串编码问题：过滤器 CharacterEncodingFilter（filter-name） 
+2. 在web.xml配置监听器ContextLoaderListener（listener-class） 
 ContextLoaderListener的作用就是启动Web容器时，自动装配ApplicationContext的配置信息。因为它实现了ServletContextListener这个接口，在web.xml配置这个监听器，启动容器时，就会默认执行它实现的方法。 
-3、部署applicationContext的xml文件：contextConfigLocation（context-param下的param-name） 
-4、DispatcherServlet是前置控制器，配置在web.xml文件中的。拦截匹配的请求，Servlet拦截匹配规则要自已定义，把拦截下来的请求，依据某某规则分发到目标Controller(我们写的Action)来处理。 
+3. 部署applicationContext的xml文件：contextConfigLocation（context-param下的param-name） 
+4. DispatcherServlet是前置控制器，配置在web.xml文件中的。拦截匹配的请求，Servlet拦截匹配规则要自已定义，把拦截下来的请求，依据某某规则分发到目标Controller(我们写的Action)来处理。 
 DispatcherServlet（servlet-name、servlet-class、init-param、param-name(contextConfigLocation)、param-value） 
 在DispatcherServlet的初始化过程中，框架会在web应用的 WEB-INF文件夹下寻找名为[servlet-name]-servlet.xml 的配置文件，生成文件中定义的bean
 
